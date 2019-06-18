@@ -9,7 +9,7 @@ public class TestStudent {
         Student student = new Student();
 
 
-        Assert.assertTrue(student instanceof LearnerInterface);
+        Assert.assertTrue(student instanceof Learner);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class TestStudent {
     @Test
     public void testLearn(){
         double increase = 6L;
-        Student student = new Student((long) 0);
+        Student student = new Student( 0L);
         Double expected = student.getTotalStudyTime() + increase;
         student.learn(6L);
 

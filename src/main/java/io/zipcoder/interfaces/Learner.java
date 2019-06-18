@@ -1,6 +1,6 @@
 package io.zipcoder.interfaces;
 
-public interface LearnerInterface {
+public interface Learner {
 
     void learn(double numberOfHours);
 
