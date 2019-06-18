@@ -1,10 +1,8 @@
 package io.zipcoder.interfaces;
 
-public class LearnerInterface {
-    Double studyTime;
-    void learn(double numberOfHours) {}
+public interface LearnerInterface {
 
-    public Double getStudyTime(){
-        return studyTime;
-    }
+    void learn(double numberOfHours);
+
+    public Double getStudyTime();
 }
