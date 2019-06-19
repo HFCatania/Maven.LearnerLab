@@ -5,10 +5,10 @@ import javafx.collections.ObservableList;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class People implements Iterable{
-    ArrayList<Person> personList = new ArrayList<Person>();
+public abstract class People<E extends Person> implements Iterable{
+    ArrayList<E> personList = new ArrayList<E>();
 
-    public boolean add(Person newPerson){
+    public boolean add(E newPerson){
         personList.add(newPerson);
         return true;
     }
@@ -22,7 +22,7 @@ public class People implements Iterable{
         return null;
     }
 
-    public boolean contains(Person person){
+    public boolean contains(E person){
         for(Person findPerson:personList){
             if(findPerson.equals(person)){
 
@@ -32,7 +32,7 @@ public class People implements Iterable{
         return false;
     }
 
-    public boolean remove(Person person){
+    public boolean remove(E person){
         for(Person removePerson:personList){
             if(removePerson.equals(person)){
                 personList.remove(person);
@@ -64,10 +64,9 @@ public class People implements Iterable{
         return personList.size();
     }
 
-    public Person[] toArray(){
-        Person[] personArray = personList.toArray(new Person[personList.size()]);
-        return personArray;
-    }
+    public abstract E[] toArray();
+
+
 
     public Iterator iterator(){
         return personList.iterator();
