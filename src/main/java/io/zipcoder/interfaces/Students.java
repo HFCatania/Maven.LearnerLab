@@ -4,12 +4,12 @@ public final class Students extends People<Student> {
     private static Students instance = new Students();
 
     private Students(){
-        add(new Student(129L, "Larry"));
-        add(new Student(130L, "Moe"));
-        add(new Student(131L, "Curly"));
-        add(new Student(132L, "Groucho"));
-        add(new Student(666L, "Satan"));
-        add(new Student(134L, "Harpo"));
+        add(new Student(129L, "Larry", 0.0));
+        add(new Student(130L, "Moe",0.0));
+        add(new Student(131L, "Curly",0.0));
+        add(new Student(132L, "Groucho", 0.0));
+        add(new Student(666L, "Satan", 0.0));
+        add(new Student(134L, "Harpo", 0.0));
 }
 
     public static Students getInstance() {

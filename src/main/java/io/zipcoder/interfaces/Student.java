@@ -2,7 +2,7 @@ package io.zipcoder.interfaces;
 
 
 public class Student extends Person implements Learner {
-    private Double totalStudyTime = 0.0;
+    private Double totalStudyTime;
 
     public Student(){
     }
@@ -11,8 +11,9 @@ public class Student extends Person implements Learner {
         super(id);
     }
 
-    public Student(Long id, String name){
+    public Student(Long id, String name, Double totalStudyTime){
         super(id, name);
+        this.totalStudyTime = totalStudyTime;
     }
 
     public void learn(double numberOfHours) {
@@ -20,10 +21,10 @@ public class Student extends Person implements Learner {
     }
 
     public Double getStudyTime() {
-        return null;
+        return totalStudyTime;
     }
 
     public Double getTotalStudyTime() {
-        return totalStudyTime;
+        return this.totalStudyTime;
     }
 }

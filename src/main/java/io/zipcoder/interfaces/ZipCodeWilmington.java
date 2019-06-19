@@ -24,7 +24,7 @@ public final class ZipCodeWilmington {
         for(int i = 0; i < students.count(); i++){
             stus[i] = (Student) dumbLearners[i];
         }
-        
+
         Instructor instructor = (Instructor) instructors.findById(id);
         instructor.lecture( stus, numberOfHours);
     }
